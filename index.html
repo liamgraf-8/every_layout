@@ -8,7 +8,7 @@
 </head>
 <body>
 	<style>
-		h1{
+		/* h1{
 			position: absolute;
 		}
 
@@ -21,23 +21,75 @@
 		a{
 			display: flex;
 			max-width: 15rem;
+		} */
+
+		section {
+			display: flex;
+			gap: 1rem;
+			margin: 4rem 0;
+			border-top: 3px solid rgb(0, 0, 0);
+			padding-top: 1rem;
+			align-items: flex-start;
+		}
+
+		.vignettes{
+			/* width: 15rem; */
+			/* par ce que flex largeur ne marche pas */
+			flex: 0 0 15rem;
+			aspect-ratio: 1/2;
+		}
+
+		.vignettes img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+
+		}
+
+		p{
+			max-width: 60ch;
 		}
 
 	</style>
 
 	<h1>Every layout</h1>
 	<div class="layout">
-		<a href="layout-01-simple.html">
-			<img src="vignettes/layout-01-simple.png" alt="">
-		</a>
 
-		<a href="layout-02-colonnes.html">
-			<img src="vignettes/layout-02-colonnes.png" alt="">
-		</a>
+			<section>
+				<div class="vignettes">
+					<a href="layout-01-simple.html">
+					<img src="vignettes/layout-01-simple.png" alt="">
+					</a>
+				</div>
+			<div class="decription">
+				<h3>Fonction essentiel</h3>
+				<p>body { max-width: 30rem; margin: auto; }</p>
+			</div>
+		</section>
 
-		<a href="layout-03-zigzag.html">
-			<img src="vignettes/layout-03-zigzag.png" alt="">
-		</a>
+		<section>
+			<div class="vignettes">
+				<a href="layout-02-colonnes.html">
+				<img src="vignettes/layout-02-colonnes.png" alt="">
+				</a>
+			</div>
+			<div class="decription">
+				<h3>Fonction essentiel</h3>
+				<p>section { dispay: flex }</p>
+			</div>
+		</section>
+
+		<section>
+			<div class="vignettes">
+				<a href="layout-03-zigzag.html">
+				<img src="vignettes/layout-03-zigzag.png" alt="">
+				</a>
+			</div>
+			<div class="decription">
+				<h3>Fonction essentiel</h3>
+				<p>section:nth-of-type(even) { flex-direction: row-reverse;}</p>
+			</div>
+		</section>
 	</div>
 
 </body>
